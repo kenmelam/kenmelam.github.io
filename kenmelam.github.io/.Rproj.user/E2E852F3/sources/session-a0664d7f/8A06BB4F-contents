@@ -2,10 +2,10 @@
 title: "kenmelam.github.io"
 ---
 
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+This is my data set.
 
 ```{r}
-1 + 1
+library(readr)
+movies <- read_csv("~/Downloads/Y2S2/NM2207/Project/movies.csv")
+movies
 ```

@@ -1,0 +1,22 @@
+---
+title: "Week8Diary"
+author: "KL"
+date: "`r Sys.Date()`"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Topic of project
+```{r, eval=FALSE,echo=TRUE}
+# I have chosen to do a project on the success of 4 major film production companies. This will include looking at their box office success across different genres of movies they have produced, directors employed and so on. 
+```
+
+## Data sources
+```{r, eval=FALSE,echo=TRUE}
+# I have found this data set that has data from 1980 to 2018, including values such as the title, year, grossing and IMDB rating. It can be used to visualise data in various ways to plot the success of these companies over the years.
+```

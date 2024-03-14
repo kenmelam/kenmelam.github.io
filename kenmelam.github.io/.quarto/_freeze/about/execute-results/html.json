@@ -1,7 +1,7 @@
 {
-  "hash": "a754ce02c0472c0b163d8ffb898e69ac",
+  "hash": "d4e7608d82cf7122f91878e941e6c670",
   "result": {
-    "markdown": "---\ntitle: \"About\"\n---\n\n\nAbout this site\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 2\n```\n:::\n:::\n",
+    "markdown": "---\ntitle: \"About Me\"\n---\n\n\nWelcome to Kenme's project website!\n\n\n::: {.cell}\n\n:::\n\n\nI am a second-year Communications & New Media student at NUS. I'm interested in fashion, pop culture and the media (of course)!\n",
     "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"
