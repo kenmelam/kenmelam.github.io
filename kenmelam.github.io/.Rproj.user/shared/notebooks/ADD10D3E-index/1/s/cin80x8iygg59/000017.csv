@@ -1,5 +1,5 @@
 "0","library(readr)"
-"0","movies <- read_csv(""~/Downloads/Y2S2/NM2207/Project/movies.csv"")"
+"0","movies <- read_csv(""movies.csv"")"
 "2","[1mRows: [22m[34m7668[39m [1mColumns: [22m[34m15[39m"
 "2","[36m──[39m [1mColumn specification[22m [36m───────────────────────────────────────────[39m
 [1mDelimiter:[22m "",""

@@ -6,6 +6,6 @@ This is my data set.
 
 ```{r}
 library(readr)
-movies <- read_csv("~/Downloads/Y2S2/NM2207/Project/movies.csv")
+movies <- read_csv("movies.csv")
 movies
 ```
