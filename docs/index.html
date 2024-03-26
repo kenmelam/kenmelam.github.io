@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -123,7 +157,69 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>This is my data set.</p>
+<p>This is my data set about Taylor Swift’s music.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>taylorswift <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"taylorswift.csv"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(taylorswift)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   album_title                                           album_url     category
+1 Taylor Swift https://genius.com/albums/Taylor-Swift/Taylor-Swift Taylor Swift
+2 Taylor Swift https://genius.com/albums/Taylor-Swift/Taylor-Swift Taylor Swift
+3 Taylor Swift https://genius.com/albums/Taylor-Swift/Taylor-Swift Taylor Swift
+4 Taylor Swift https://genius.com/albums/Taylor-Swift/Taylor-Swift Taylor Swift
+5 Taylor Swift https://genius.com/albums/Taylor-Swift/Taylor-Swift Taylor Swift
+6 Taylor Swift https://genius.com/albums/Taylor-Swift/Taylor-Swift Taylor Swift
+  album_track_number             song_title
+1                  1             Tim McGraw
+2                  2        Picture to Burn
+3                  3 Teardrops On My Guitar
+4                  4  A Place In This World
+5                  5            Cold as You
+6                  6            The Outside
+                                                       song_url
+1             https://genius.com/Taylor-swift-tim-mcgraw-lyrics
+2        https://genius.com/Taylor-swift-picture-to-burn-lyrics
+3 https://genius.com/Taylor-swift-teardrops-on-my-guitar-lyrics
+4  https://genius.com/Taylor-swift-a-place-in-this-world-lyrics
+5            https://genius.com/Taylor-swift-cold-as-you-lyrics
+6            https://genius.com/Taylor-swift-the-outside-lyrics
+      song_artists song_release_date song_page_views
+1 ['Taylor Swift']        2006-06-19          241400
+2 ['Taylor Swift']        2006-10-24          258600
+3 ['Taylor Swift']        2006-10-24          227300
+4 ['Taylor Swift']        2006-10-24           75800
+5 ['Taylor Swift']        2006-10-24          127000
+6 ['Taylor Swift']        2006-10-24           90800
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         song_lyrics
+1 He said the way my blue eyes shined Put those Georgia stars to shame that night I said, "That's a lie" Just a boy in a Chevy truck That had a tendency of gettin' stuck On backroads at night And I was right there beside him all summer long And then the time we woke up to find that summer gone But when you think Tim McGraw I hope you think my favorite song The one we danced to all night long The moon like a spotlight on the lake When you think happiness I hope you think that little black dress Think of my head on your chest And my old faded blue jeans When you think Tim McGraw I hope you think of me September saw a month of tears And thankin' God that you weren't here To see me like that But in a box beneath my bed Is a letter that you never read From three summers back It's hard not to find it all a little bittersweet And lookin' back on all of that, it's nice to believe When you think Tim McGraw I hope you think my favorite song The one we danced to all night long The moon like a spotlight on the lake When you think happiness I hope you think that little black dress Think of my head on your chest And my old faded blue jeans When you think Tim McGraw I hope you think of me And I'm back for the first time since then I'm standin' on your street And there's a letter left on your doorstep And the first thing that you'll read Is, "When you think Tim McGraw I hope you think my favorite song Someday you'll turn your radio on I hope it takes you back to that place" When you think happiness I hope you think that little black dress Think of my head on your chest And my old faded blue jeans When you think Tim McGraw I hope you think of me Oh, think of me, mmm He said the way my blue eyes shined Put those Georgia stars to shame that night I said, "That's a lie"
+2                                                                                                                                                                                                                                                             State the obvious, I didn't get my perfect fantasy I realize you love yourself more than you could ever love me So go and tell your friends that I'm obsessive and crazy That's fine, you won't mind if I say By the way I hate that stupid old pickup truck you never let me drive You're a redneck heartbreak who's really bad at lyin' So watch me strike a match on all my wasted time As far as I'm concerned, you're just another picture to burn There's no time for tears, I'm just sittin' here planning my revenge There's nothing stoppin' me from goin' out with all of your best friends And if you come around sayin' sorry to me My daddy's gonna show ya how sorry you'll be 'Cause I hate that stupid old pickup truck you never let me drive You're a redneck heartbreak who's really bad at lyin' So watch me strike a match on all my wasted time As far as I'm concerned, you're just another picture to burn And if you're missing me, you'd better keep it to yourself 'Cause coming back around here would be bad for your health 'Cause I hate that stupid old pickup truck you never let me drive You're a redneck heartbreak who's really bad at lyin' So watch me strike a match on all my wasted time In case you haven't heard I really, really hate that stupid old pickup truck you never let me drive You're a redneck heartbreak who's really bad at lyin' So watch me strike a match on all my wasted time As far as I'm concerned, you're just another picture to burn Burn, burn, burn, baby, burn You're just another picture to burn Baby, burn
+3                                                                                                                                                                                                                                                                                                                                                                                                                Drew looks at me I fake a smile so he won't see That I want and I'm needing Everything that we should be I'll bet she's beautiful, that girl he talks about And she's got everything that I have to live without Drew talks to me I laugh 'cause it's just so funny That I can't even see Anyone when he's with me He says he's so in love, he's finally got it right I wonder if he knows he's all I think about at night He's the reason for the teardrops on my guitar The only thing that keeps me wishin' on a wishing star He's the song in the car I keep singing, don't know why I do Drew walks by me Can he tell that I can't breathe? And there he goes, so perfectly The kind of flawless I wish I could be She'd better hold him tight, give him all her love Look in those beautiful eyes and know she's lucky 'cause He's the reason for the teardrops on my guitar The only thing that keeps me wishin' on a wishing star He's the song in the car I keep singing, don't know why I do So I'll drive home alone as I turn off the light I'll put his picture down and maybe get some sleep tonight 'Cause he's the reason for the teardrops on my guitar The only one who's got enough of me to break my heart He's the song in the car I keep singing, don't know why I do He's the time taken up, but there's never enough And he's all that I need to fall into Drew looks at me I fake a smile, so he won't see
+4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     I don't know what I want, so don't ask me 'Cause I'm still trying to figure it out Don't know what's down this road, I'm just walking Trying to see through the rain coming down Even though I'm not the only one Who feels the way I do I'm alone, on my own, and that's all I know I'll be strong, I'll be wrong, oh, but life goes on Oh, I'm just a girl trying to find a place in this world Got the radio on, my old blue jeans And I'm wearing my heart on my sleeve Feeling lucky today, got the sunshine Could you tell me what more do I need? And tomorrow's just a mystery, oh, yeah But that's okay I'm alone, on my own, and that's all I know I'll be strong, I'll be wrong, oh, but life goes on Oh, I'm just a girl trying to find a place in this world Maybe I'm just a girl on a mission But I'm ready to fly I'm alone, on my own, and that's all I know I'll be strong, I'll be wrong, oh, but life goes on Oh, I'm alone, on my own, and that's all I know Oh, I'm just a girl trying to find a place in this world Oh, I'm just a girl Oh, I'm just a girl, oh, oh Oh, I'm just a girl
+5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            You have a way of coming easily to me And when you take, you take the very best of me So I start a fight 'cause I need to feel something And you do what you want 'cause I'm not what you wanted Oh, what a shame, what a rainy ending Given to a perfect day Just walk away, ain't no use defending Words that you will never say And now that I'm sitting here thinking it through I've never been anywhere cold as you You put up walls and paint them all a shade of gray And I stood there loving you and wished them all away And you come away with a great little story Of a mess of a dreamer with the nerve to adore you Oh, what a shame, what a rainy ending Given to a perfect day So just walk away, ain't no use defending Words that you will never say And now that I'm sitting here thinking it through I've never been anywhere cold as you You never did give a damn thing, honey But I cried, cried for you And I know you wouldn't have told nobody If I died, died for you, died for you Oh, what a shame, what a rainy ending Given to a perfect day, oh Every smile you fake is so condescending Counting all the scars you made And now that I'm sitting here thinking it through I've never been anywhere cold as you Ooh-oh
+6                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  I didn't know what I would find When I went looking for a reason, I know I didn't read between the lines And, baby, I've got nowhere to go I tried to take the road less traveled by But nothing seems to work the first few times Am I right? So how can I ever try to be better? Nobody ever lets me in I can still see you, this ain't the best view On the outside looking in I've been a lot of lonely places I've never been on the outside You saw me there, but never knew That I would give it all up to be A part of this, a part of you And now, it's all too late, so you see You could've helped if you had wanted to But no one notices until it's too late to do anything How can I ever try to be better? Nobody ever lets me in I can still see you, this ain't the best view On the outside looking in I've been a lot of lonely places I've never been on the outside Oh, yeah How can I ever try to be better? Nobody ever lets me in And I can still see you, this ain't the best view On the outside looking in I've been a lot of lonely places I've never been on the outside Oh-oh Oh, oh-oh Oh-oh Oh-oh
+                                                 song_writers
+1                                ['Liz Rose', 'Taylor Swift']
+2                                ['Liz Rose', 'Taylor Swift']
+3                                ['Liz Rose', 'Taylor Swift']
+4 ['Angelo Petraglia', 'Robert Ellis Orrall', 'Taylor Swift']
+5                                ['Liz Rose', 'Taylor Swift']
+6                                            ['Taylor Swift']
+           song_producers
+1      ['Nathan Chapman']
+2      ['Nathan Chapman']
+3      ['Nathan Chapman']
+4      ['Nathan Chapman']
+5      ['Nathan Chapman']
+6 ['Robert Ellis Orrall']
+                                                                                                                                                        song_tags
+1                                                           ['Country', 'English', 'USA', 'Country Rock', 'American Folk', 'Folk', 'Ballad', 'Singer-Songwriter']
+2                                                       ['Pop', 'Rock', 'Country', 'English', 'USA', 'Country Rock', 'Pop-Punk', 'Pop-Rock', 'Singer-Songwriter']
+3 ['Country', 'English', 'USA', 'Adult Contemporary', 'American Folk', 'Americana', 'Folk Pop', 'Folk', 'Teen Pop', 'Ballad', 'Country Pop', 'Singer-Songwriter']
+4                                                              ['Country', 'Pop', 'English', 'USA', 'Teen Pop', 'Country Pop', 'Soundtrack', 'Singer-Songwriter']
+5                                                                              ['Country', 'Pop', 'English', 'USA', 'Ballad', 'Country Pop', 'Singer-Songwriter']
+6                                                                            ['Country', 'Pop', 'USA', 'English', 'Teen Pop', 'Country Pop', 'Singer-Songwriter']</code></pre>
+</div>
+</div>
 <iframe height="400" width="100%" frameborder="no" src="https://kenme.shinyapps.io/myshinyapp/"> </iframe>
 
 
