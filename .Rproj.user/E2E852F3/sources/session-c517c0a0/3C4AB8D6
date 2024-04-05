@@ -3,7 +3,7 @@
     "path": "~/Documents/GitHub/kenmelam.github.io/myshinyapp/app.R",
     "project_path": "myshinyapp/app.R",
     "type": "r_source",
-    "hash": "1681543432",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1711432499305.0,
@@ -12,8 +12,8 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "28,8",
-        "scrollLine": "11"
+        "cursorPosition": "15,7",
+        "scrollLine": "0"
     },
     "folds": "",
     "lastKnownWriteTime": 1711442634,
