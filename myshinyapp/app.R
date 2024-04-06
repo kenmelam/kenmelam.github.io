@@ -1,35 +1,22 @@
 library(shiny)
-
-# Define UI for application that draws a histogram
-ui <- fluidPage(
-  titlePanel("About The Project"),
-  
-  fluidRow(
-    column(width = 12,
-           tags$div(
-             style = "text-align:center;",
-             tags$img(src = "taylor.png", height = "auto", width = "50%")
-           )
-    )
-  ),
-  
-  fluidRow(
-    column(width = 12,
-           h2("Welcome to Kenme's project website!"),
-           p("I am a second-year Communications & New Media student at NUS. I'm interested in fashion, pop culture and the media (of course)! Hence, my project is about Taylor Swift's music and how it resonates with audiences. This looks at the genres of music she has produced and its correlation with its popularity, as well as the use of certain themes or lyrics.")
-    )
-  )
+# Sample 
+swift_discography <- data.frame(
+Album = c("Taylor Swift", "Fearless", "Speak Now", "Red", "1989", "Reputation", "Lover", "folklore", "evermore"),  Release_Year = c(2006, 2008, 2010, 2012, 2014, 2017, 2019, 2020, 2020),
+Genre = c("Country", "Country/Pop", "Country/Pop", "Pop", "Pop", "Pop", "Pop", "Indie Folk", "Indie Folk"))
+# Define UI for application
+ui <- fluidPage(  titlePanel("Taylor Swift's Discography"),
+                  sidebarLayout(    sidebarPanel(
+                    selectInput("album", "Select an Album:", choices = unique(swift_discography$Album))    ),
+                    mainPanel(      plotOutput("album_plot")
+                    )  )
 )
-
+# Define server logic
 server <- function(input, output) {
-    observeEvent(input$taylor_image, {
-      showModal(modalDialog(
-        title = "Image Clicked",
-        "Yup, that's Taylor Swift!"
-      ))
-    })
-  }
-  
+  output$album_plot <- renderPlot({
+    selected_album <- swift_discography[swift_discography$Album == input$album, ]
+    barplot(table(selected_album$Genre), main = paste("Genres in", input$album), xlab = "Genre", ylab = "Count")
+  })
+}
 
-# Run the application 
+# Run the application
 shinyApp(ui = ui, server = server)
