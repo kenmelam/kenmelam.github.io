@@ -3,9 +3,9 @@
     "path": "~/Documents/GitHub/kenmelam.github.io/index.qmd",
     "project_path": "index.qmd",
     "type": "quarto_markdown",
-    "hash": "0",
+    "hash": "3009845277",
     "contents": "",
-    "dirty": true,
+    "dirty": false,
     "created": 1710484794315.0,
     "source_on_save": false,
     "relative_order": 2,
@@ -17,15 +17,15 @@
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
         "rmdVisualModeLocation": "61:0",
-        "cursorPosition": "7,42",
-        "scrollLine": "1"
+        "cursorPosition": "4,68",
+        "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1712639145,
+    "lastKnownWriteTime": 1712657245,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1712647127034,
+    "last_content_update": 1712657245562,
     "read_only": false,
     "read_only_alternatives": []
 }
