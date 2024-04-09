@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -159,8 +125,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>Let’s take a look at how Taylor Swift’s music has evolved over time!</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>taylorswift <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"taylorswift.csv"</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(taylorswift)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   album_title                                           album_url     category
 1 Taylor Swift https://genius.com/albums/Taylor-Swift/Taylor-Swift Taylor Swift
@@ -218,6 +182,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 4                                                              ['Country', 'Pop', 'English', 'USA', 'Teen Pop', 'Country Pop', 'Soundtrack', 'Singer-Songwriter']
 5                                                                              ['Country', 'Pop', 'English', 'USA', 'Ballad', 'Country Pop', 'Singer-Songwriter']
 6                                                                            ['Country', 'Pop', 'USA', 'English', 'Teen Pop', 'Country Pop', 'Singer-Songwriter']</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1]]
+[1] "Country"
+
+[[2]]
+[1] "English"
+
+[[3]]
+[1] "USA"
+
+[[4]]
+[1] "Country_Rock"
+
+[[5]]
+[1] "American_Folk"
+
+[[6]]
+[1] "Folk"
+
+[[7]]
+[1] "Ballad"</code></pre>
 </div>
 </div>
 

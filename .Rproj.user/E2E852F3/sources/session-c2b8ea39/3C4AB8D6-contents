@@ -25,7 +25,6 @@ server <- function(input, output) {
         geom_bar(stat = "identity") + 
         theme_minimal() + 
         labs(title = "Genres Covered in Selected Album", x = "Genres", y = "Count") +
-        theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
         scale_fill_discrete(name = "Genre")
     }
   })

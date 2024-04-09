@@ -4,14 +4,34 @@ title: "An Analysis of Taylor Swift's Discography"
 
 Let's take a look at how Taylor Swift's music has evolved over time!
 
-```{r}
+```{r, echo=FALSE, eval=TRUE}
 taylorswift <- read.csv("taylorswift.csv")
 head(taylorswift)
 
 library(stringr)
+library(ggplot2)
 genres <- c('Country', 'English', 'USA', 'Country_Rock', 'American_Folk', 'Folk', 'Ballad')
 genre_vectors <- str_split(genres, " ")  
 print(genre_vectors)
 
+#2: Here I want to extract keywords (colours) from the column "song_lyrics" and count their frequency
+song_lyrics <- data.frame(
+keyword <- colours())
 
+# Tokenize the lyrics to extract individual words
+words <- str_split(song_lyrics$lyrics, "\\s+") %>%
+unlist()
+
+keyword_frequency <- sum(words == keyword)
+keyword_data <- data.frame(keyword = keyword, frequency = keyword_frequency)
+
+# Bar plot
+ggplot(keyword_data, aes(x = keyword, y = frequency)) +
+geom_bar(stat = "identity", fill = "skyblue", width = 0.5) +
+ggtitle("Keyword Frequency in Song Lyrics") +
+xlab("Keyword") +
+ylab("Frequency")
+
+# Run the application
+shinyApp(ui = ui, server = server)
 ```
