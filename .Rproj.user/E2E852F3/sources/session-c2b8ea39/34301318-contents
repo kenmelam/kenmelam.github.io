@@ -9,7 +9,7 @@ website:
       - href: index.qmd
         text: Analysis
       - about.qmd
-      - app.R
+    
 
 format:
   html:

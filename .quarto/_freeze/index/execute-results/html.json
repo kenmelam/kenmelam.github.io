@@ -1,8 +1,10 @@
 {
-  "hash": "15a308c3a3b54fd8064da0d9ed892ebc",
+  "hash": "012f55355c53777d37245075c05ac214",
   "result": {
-    "markdown": "---\ntitle: \"An Analysis of Taylor Swift's Discography\"\n---\n\n\nLet's take a look at how Taylor Swift's music has evolved over time!\n\n\n::: {.cell}\n\n:::",
-    "supporting": [],
+    "markdown": "---\ntitle: \"An Analysis of Taylor Swift's Discography\"\n---\n\n\nLet's take a look at how Taylor Swift's music has evolved over time!\n\n\n::: {.cell}\n\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],
