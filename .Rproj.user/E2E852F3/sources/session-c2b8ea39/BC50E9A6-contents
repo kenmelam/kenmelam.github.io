@@ -5,11 +5,6 @@ title: "An Analysis of Taylor Swift's Discography"
 Let's take a look at how Taylor Swift's music has evolved over time!
 
 ```{r, echo=FALSE, eval=TRUE}
-taylorswift <- read.csv("taylorswift.csv")
-head(taylorswift)
-
-```
-```{r, echo=FALSE, eval=TRUE}
 
 library(stringr)
 library(ggplot2)
