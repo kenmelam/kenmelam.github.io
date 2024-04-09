@@ -19,7 +19,7 @@ taylorswift$Ballad = as.numeric(str_detect(cur_col, pattern = genres[[7]]))
 
 # 1: plot bar chart for different genres present in her albums  
 # Define UI for application
-ui <- fluidPage(  titlePanel("An Analysis of Taylor Swift's Discography"),
+ui <- fluidPage(  titlePanel("Genres Covered Per Album"),
                   sidebarLayout(    sidebarPanel(
                     selectInput("album_title", "Select an Album", choices = unique(taylorswift$album_title)), actionButton("Start","Generate Analysis")),
                     mainPanel( tabsetPanel(tabPanel("Genres Covered", plotOutput("genreplot")) )
