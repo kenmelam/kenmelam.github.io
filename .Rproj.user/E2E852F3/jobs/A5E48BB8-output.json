@@ -1,4 +1,0 @@
-[1,"==> quarto preview index.qmd --to html --no-watch-inputs --no-browse\n\n"]
-[1,"\u001B[31m\n\nprocessing file: index.qmd\n\u001B[39m\r  |                                                          \r  |                                                    |   0%\r  |                                                          \r  |..........................                          |  50%                  \r  |                                                          \r  |....................................................| 100% [unnamed-chunk-1]"]
-[1,"\u001B[31m\nQuitting from lines 8-35 [unnamed-chunk-1] (index.qmd)\n\u001B[39m\u001B[31mError in `shinyApp()`:\n! could not find function \"shinyApp\"\n\u001B[39m"]
-[1,"\r                                                                                                            \n\u001B[31mExecution halted\n\u001B[39m"]

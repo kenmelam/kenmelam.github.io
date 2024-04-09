@@ -5,6 +5,7 @@ taylorswift <- read.csv("taylorswift.csv")
 
 library(stringr)
 library(ggplot2)
+
 genres <- c('Country', 'English', 'USA', 'Country Rock', 'American Folk', 'Folk', 'Ballad')
 cur_col <- taylorswift$song_tags
 taylorswift$Country = as.numeric(str_detect(cur_col, pattern = genres[[1]]))
