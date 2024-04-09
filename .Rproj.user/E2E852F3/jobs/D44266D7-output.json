@@ -1,3 +1,0 @@
-[1,"=> shiny::runApp()\n\n"]
-[2,"Loading required package: shiny\nWarning in file(file, \"rt\") :\n  cannot open file 'taylorswift.csv': No such file or directory\nError in file(file, \"rt\") : cannot open the connection\nCalls: <Anonymous> ... eval -> ..stacktraceon.. -> read.csv -> read.table -> file\nExecution halted\n"]
-[1,"\nShiny application failed (exit status 1).\n\n"]
