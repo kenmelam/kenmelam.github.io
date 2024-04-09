@@ -6,15 +6,14 @@ taylorswift <- read.csv("taylorswift.csv")
 library(stringr)
 library(ggplot2)
 
-genres <- c('Country', 'English', 'USA', 'Country Rock', 'American Folk', 'Folk', 'Ballad')
+genres <- c('Country', 'Country Rock', 'American Folk', 'Folk', 'Ballad', 'Pop')
 cur_col <- taylorswift$song_tags
 taylorswift$Country = as.numeric(str_detect(cur_col, pattern = genres[[1]]))
-taylorswift$English = as.numeric(str_detect(cur_col, pattern = genres[[2]]))
-taylorswift$USA = as.numeric(str_detect(cur_col, pattern = genres[[3]]))
-taylorswift$Country_Rock = as.numeric(str_detect(cur_col, pattern = genres[[4]]))
-taylorswift$American_Folk = as.numeric(str_detect(cur_col, pattern = genres[[5]]))
-taylorswift$Folk = as.numeric(str_detect(cur_col, pattern = genres[[6]]))
-taylorswift$Ballad = as.numeric(str_detect(cur_col, pattern = genres[[7]]))
+taylorswift$Country_Rock = as.numeric(str_detect(cur_col, pattern = genres[[2]]))
+taylorswift$American_Folk = as.numeric(str_detect(cur_col, pattern = genres[[3]]))
+taylorswift$Folk = as.numeric(str_detect(cur_col, pattern = genres[[4]]))
+taylorswift$Ballad = as.numeric(str_detect(cur_col, pattern = genres[[5]]))
+taylorswift$Pop = as.numeric(str_detect(cur_col, pattern = genres[[6]]))
 
 
 # 1: plot bar chart for different genres present in her albums  
@@ -34,8 +33,8 @@ server <- function(input, output) {
     
     if (nrow(df) > 0) {
       df %>%
-        select(Country:Ballad) %>%
-        pivot_longer(Country:Ballad, names_to = "genre", values_to = "val") %>%
+        select(Country:Pop) %>%
+        pivot_longer(Country:Pop, names_to = "genre", values_to = "val") %>%
         group_by(genre) %>%
         summarise(n = mean(val, na.rm = T)) %>%
       ggplot(aes(x = genre, y = n, fill = genre)) + 
