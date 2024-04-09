@@ -7,8 +7,9 @@ website:
   navbar:
     left:
       - href: index.qmd
-        text: Home
+        text: Analysis
       - about.qmd
+      - app.R
 
 format:
   html:
