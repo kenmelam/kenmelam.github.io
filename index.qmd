@@ -7,4 +7,11 @@ Let's take a look at how Taylor Swift's music has evolved over time!
 ```{r}
 taylorswift <- read.csv("taylorswift.csv")
 head(taylorswift)
+
+library(stringr)
+genres <- c('Country', 'English', 'USA', 'Country_Rock', 'American_Folk', 'Folk', 'Ballad')
+genre_vectors <- str_split(genres, " ")  
+print(genre_vectors)
+
+
 ```
