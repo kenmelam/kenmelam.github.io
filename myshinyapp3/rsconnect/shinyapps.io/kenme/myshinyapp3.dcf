@@ -1,0 +1,12 @@
+name: myshinyapp3
+title: myshinyapp3
+username: kenme
+account: kenme
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 11716412
+bundleId: 8475262
+url: https://kenme.shinyapps.io/myshinyapp3/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
