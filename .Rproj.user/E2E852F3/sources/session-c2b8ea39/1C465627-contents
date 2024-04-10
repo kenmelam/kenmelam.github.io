@@ -5,6 +5,7 @@ library(ggplot2)
 taylorswift <- read.csv("taylorswift.csv") 
 taylorswift$release_year <- substr(taylorswift$song_release_date, 1, 4)
 
+df<-taylorswift
 tswift <- df$song_page_views[c(1:14)]
 fearless_plat <- df$song_page_views[c(15:32)]
 fearless_tv <- df$song_page_views[c(33:57)]
