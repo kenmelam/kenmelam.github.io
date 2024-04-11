@@ -15,3 +15,9 @@ However, which albums did the best in terms of average page views per song?
 ```{=html}
 <iframe height="700" width="100%" frameborder="no" src="https://kenme.shinyapps.io/myshinyapp3/"> </iframe>
 ```
+
+From this analysis, it seems like folklore, a primarily folk-pop album was most popular. Since users mainly use the Genius website to search for lyrics, it can be inferred that the highest number of users wanted to know more about the lyrics of the songs on the album. Let's look even further into this -- what keywords in Taylor's folklore album came up the most?
+
+```{=html}
+<iframe height="700" width="100%" frameborder="no" src="https://kenme.shinyapps.io/myshinyapp4/"> </iframe>
+```

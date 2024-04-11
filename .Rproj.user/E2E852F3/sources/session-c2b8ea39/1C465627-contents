@@ -65,7 +65,7 @@ print(midnights_avg)
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
-  titlePanel("Average Number of Views per Album"),
+  titlePanel("Average Number of Views per Song"),
   mainPanel(
     plotOutput("distPlot")
   )
@@ -78,7 +78,7 @@ album_avg_views <- data.frame(
             "Red (Deluxe Edition)", "Red (Taylor's Version)",
             "1989 (Deluxe Edition)", "1989 (Taylor's Version)",
             "Reputation", "Lover", "Folklore (Deluxe Edition)",
-            "Evermore (Deluxe Edition)", "Midnight's"),
+            "Evermore (Deluxe Edition)", "Midnights"),
   Release_Year = c(2006, 2008, 2021, 2010, 2010, 2012, 2012, 2014, 2014, 2017, 2019, 2020, 2020, 2022),
   Average_Views = c(tswift_avg, fearlessplat_avg, fearlesstv_avg, 
                     speaknowdeluxe_avg, speaknowtv_avg,
@@ -89,28 +89,6 @@ album_avg_views <- data.frame(
                     midnights_avg)
 )
 
-# Define UI for application
-ui <- fluidPage(
-  titlePanel("Average Number of Views per Album"),
-  mainPanel(
-    plotOutput("distPlot")
-  )
-)
-
-# Define server logic
-server <- function(input, output) {
-  output$distPlot <- renderPlot({
-    # Plot line or dot graph of average views per album by release year
-    ggplot(album_avg_views, aes(x = Release_Year, y = Average_Views, group = Album)) +
-      geom_line() +  # You can also use geom_point() for a dot graph
-      labs(title = "Average Number of Views per Album by Release Year",
-           x = "Release Year", y = "Average Views")
-  })
-}
-
-# Run the application
-shinyApp(ui = ui, server = server)
-
 
 # Create a data frame with album names and their average views
 album_avg_views <- data.frame(
@@ -119,7 +97,7 @@ album_avg_views <- data.frame(
             "Red (Deluxe Edition)", "Red (Taylor's Version)",
             "1989 (Deluxe Edition)", "1989 (Taylor's Version)",
             "Reputation", "Lover", "Folklore (Deluxe Edition)",
-            "Evermore (Deluxe Edition)", "Midnight's"),
+            "Evermore (Deluxe Edition)", "Midnights"),
   Average_Views = c(tswift_avg, fearlessplat_avg, fearlesstv_avg, 
                     speaknowdeluxe_avg, speaknowtv_avg,
                     reddeluxe_avg, redtv_avg,
@@ -135,7 +113,7 @@ server <- function(input, output) {
     # Plot bar chart of average views per album
     ggplot(album_avg_views, aes(x = Album, y = Average_Views)) +
       geom_bar(stat = "identity", fill = "darkred") +
-      labs(title = "Average Number of Views per Album",
+      labs(title = "Average Number of Views per Song",
            x = "Album", y = "Average Views") +
       theme(axis.text.x = element_text(angle = 45, hjust = 1))
   })

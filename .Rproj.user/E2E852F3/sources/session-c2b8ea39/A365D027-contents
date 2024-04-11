@@ -1,36 +1,94 @@
-library(tidyverse)
+# Load necessary libraries
+library(stringr)
+library(dplyr)
+library(ggplot2)
 
-# Sample data
-song_lyrics <- data.frame(
-  song_lyrics = c("red blue green yellow blue red green", "blue green yellow red"),
-  release_year <- ,
-  stringsAsFactors = FALSE
+# Read the dataset
+data <- read.csv("taylorswift.csv", stringsAsFactors = FALSE)
+
+# filter out unwanted albums
+included_albums <- c("Taylor Swift", "Fearless (Platinum)", "Fearless (Taylor's Version)", 
+                     "Speak Now (Deluxe Edition)", "Speak Now (Taylor's Version)",
+                     "Red (Deluxe Edition)", "Red (Taylor's Version)",
+                     "1989 (Deluxe Edition)", "1989 (Taylor's Version)",
+                     "Reputation", "Lover", "Folklore (Deluxe Edition)",
+                     "Evermore (Deluxe Edition)", "Midnights")
+
+colors <- c("red", "blue", "green", "yellow", "black", "white", "pink", "purple", "orange", "brown", "grey", "gray")
+
+pattern <- paste(colors, collapse = "|")
+
+# Filter for specified albums, extract colors, and count per album
+color_counts_per_album <- data %>%
+  filter(album_title %in% included_albums) %>% # Keep only the specified albums
+  mutate(matched_colors = str_extract_all(song_lyrics, pattern)) %>%
+  filter(lengths(matched_colors) > 0) %>%
+  unnest(matched_colors) %>%
+  group_by(album_title, matched_colors) %>%
+  summarise(color_count = n(), .groups = "drop") %>%
+  ungroup()
+
+color_palette <- c(
+  red = "#FF0000",
+  blue = "#0000FF",
+  green = "#008000",
+  yellow = "#FFFF00",
+  black = "#000000",
+  white = "#FFFFFF",
+  pink = "#FFC0CB",
+  purple = "#800080",
+  orange = "#FFA500",
+  brown = "#A52A2A",
+  gray = "#808080",
+  grey = "#808080" 
 )
 
-# Vector of colors (keywords)
-keywords <- c("red", "blue", "green", "yellow")
+ggplot(color_counts_per_album, aes(x = matched_colors, y = color_count, fill = matched_colors)) +
+  geom_bar(stat = "identity") +
+  scale_fill_manual(values = color_palette) + 
+  facet_wrap(~ album_title, scales = "free_y", ncol = 1) + 
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  labs(x = "Color", y = "Count", title = "Color Frequency per Album in Song Lyrics") +
+  theme_minimal() +
+  theme(legend.position = "bottom", legend.title = element_blank())
 
-# Function to count keyword frequencies for a given set of lyrics
-count_keyword_frequencies <- function(lyrics, keywords) {
-  words <- unlist(str_split(lyrics, "\\s+"))
-  keyword_frequency <- table(factor(words, levels = keywords))
-  return(keyword_frequency)
+# Define the UI
+ui <- fluidPage(
+  titlePanel("Color Frequency per Album in Song Lyrics"),
+  sidebarLayout(
+    sidebarPanel(
+      selectInput("selectedAlbum",
+                  "Choose an Album:",
+                  choices = c("Taylor Swift", "Fearless (Platinum)", "Fearless (Taylor's Version)", 
+                              "Speak Now (Deluxe Edition)", "Speak Now (Taylor's Version)",
+                              "Red (Deluxe Edition)", "Red (Taylor's Version)",
+                              "1989 (Deluxe Edition)", "1989 (Taylor's Version)",
+                              "Reputation", "Lover", "Folklore (Deluxe Edition)",
+                              "Evermore (Deluxe Edition)", "Midnights"),
+                  selected = "Taylor Swift")
+    ),
+    mainPanel(
+      plotOutput("colorHistogram")
+    )
+  )
+)
+
+# Define the server logic
+server <- function(input, output) {
+  output$colorHistogram <- renderPlot({
+
+    filtered_data <- color_counts_per_album %>%
+      filter(album_title == input$selectedAlbum)
+    
+    ggplot(filtered_data, aes(x = matched_colors, y = color_count, fill = matched_colors)) +
+      geom_bar(stat = "identity") +
+      scale_fill_manual(values = color_palette) +
+      theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+      labs(x = "Color", y = "Count", title = paste("Color Frequency in", input$selectedAlbum)) +
+      theme_minimal() +
+      theme(legend.position = "bottom", legend.title = element_blank())
+  })
 }
 
-# Apply the function to each song lyrics and combine the results
-keyword_frequencies <- song_lyrics %>%
-  group_by(release_year) %>%
-  summarise(keyword_count = list(count_keyword_frequencies(song_lyrics, keywords))) %>%
-  unnest(keyword_count)
-
-# Plot grouped bar graph
-ggplot(keyword_frequencies, aes(x = keyword, y = Freq, fill = as.factor(release_year))) +
-  geom_bar(stat = "identity", position = "dodge") +
-  labs(title = "Keyword Frequency in Song Lyrics by Year",
-       x = "Keyword",
-       y = "Frequency",
-       fill = "Year") +
-  theme_minimal()
-
-# Run the application 
+# Run the application
 shinyApp(ui = ui, server = server)
