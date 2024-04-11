@@ -2,6 +2,7 @@
 library(stringr)
 library(dplyr)
 library(ggplot2)
+library(tidyr)
 
 # Read the dataset
 data <- read.csv("taylorswift.csv", stringsAsFactors = FALSE)

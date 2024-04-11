@@ -5,7 +5,7 @@ account: kenme
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 11728721
-bundleId: 8480238
+bundleId: 8480275
 url: https://kenme.shinyapps.io/shinyapp4/
 version: 1
 asMultiple: FALSE
