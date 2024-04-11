@@ -2,7 +2,8 @@
 title: "An Analysis of Taylor Swift's Discography"
 ---
 
-Let's take a look at how Taylor Swift's music has evolved over time!
+## How has Taylor Swift's music evolved over time?
+Let's take a look at how Taylor Swift's music has changed over time, by looking at the genres of music she's produced. 
 
 ```{=html}
 <iframe height="700" width="100%" frameborder="no" src="https://kenme.shinyapps.io/myshinyapp/"> </iframe>
