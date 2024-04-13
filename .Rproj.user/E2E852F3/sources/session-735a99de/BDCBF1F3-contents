@@ -2,6 +2,7 @@ library(shiny)
 library(ggplot2)
 library(plotly)
 library(dplyr)
+library(tidyverse)
 
 ui <- fluidPage(
   titlePanel("Boxplot of Song Page Views by Producer"),
