@@ -4,14 +4,14 @@
     "href": "about.html",
     "title": "About The Project",
     "section": "",
-    "text": "Welcome to Kenme’s project website!\nI am a second-year Communications & New Media student at NUS. I’m interested in fashion, pop culture and the media (of course)! Hence, my project is about Taylor Swift’s music and how it resonates with audiences. This looks at the genres of music she has produced and its correlation with its popularity, as well as the use of certain themes or lyrics.\nThis data set contains information from Genius about Taylor Swift’s discography, including the number of page visits for each song. As the Genius website features the song lyrics of each song and an analysis of their lyrics, it serves as a reflection of the popularity of Taylor Swift’s music as only those truly interested in it would search for this information.\nThis analysis can help to inform Taylor Swift’s executives and producers on how her future music should sound like in order to maximise the number of listens per song and increase overall profits.\n\n\n\n\n\nHave a listen to some of her music here!"
+    "text": "Welcome to Kenme’s project website!\nI am a second-year Communications & New Media student at NUS. I’m interested in fashion, pop culture and the media (of course)! Hence, my project is about Taylor Swift’s music and how it resonates with audiences. This looks at the genres of music she has produced and its correlation with its popularity, as well as the use of certain themes or lyrics.\n\n\n\n\n\nThis data set contains information from Genius about Taylor Swift’s discography, including the number of page visits for each song. As the Genius website features the song lyrics of each song and an analysis of their lyrics, it serves as a reflection of the popularity of Taylor Swift’s music as only those truly interested in it would search for this information.\nThis analysis can help to inform Taylor Swift’s executives and producers on how her future music should sound like in order to maximise the number of listens per song and increase overall profits.\nHave a listen to some of her music here!"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "An Analysis of Taylor Swift’s Discography",
     "section": "",
-    "text": "Let’s take a look at how Taylor Swift’s music has changed over time, by looking at the genres of music she’s produced.\n \nFrom the data above, we can see that Taylor Swift moved away from folk and country genres to fully embrace pop as her main genre of music over the years. For instance, in her album Reputation, pop was the overwhelming primary genre. However, in recent albums such as folklore, evermore and Midnights, there is a resurgence of songs in the american folk, country and ballad genres."
+    "text": "Taylor Swift is undoubtedly a titan of the music industry. Question is, does she know how to retain that title in the long run? To answer this question, this report provides an analysis of Taylor Swift’s song popularity over the years, utilizing various data visualization techniques to highlight trends and unique insights."
   },
   {
     "objectID": "index.html#how-has-taylor-swifts-music-evolved-over-time",
@@ -24,8 +24,8 @@
     "objectID": "index.html#how-has-taylor-swifts-music-genres-evolved-over-time",
     "href": "index.html#how-has-taylor-swifts-music-genres-evolved-over-time",
     "title": "An Analysis of Taylor Swift’s Discography",
-    "section": "",
-    "text": "Let’s take a look at how Taylor Swift’s music has changed over time, by looking at the genres of music she’s produced.\n \nFrom the data above, we can see that Taylor Swift moved away from folk and country genres to fully embrace pop as her main genre of music over the years. For instance, in her album Reputation, pop was the overwhelming primary genre. However, in recent albums such as folklore, evermore and Midnights, there is a resurgence of songs in the american folk, country and ballad genres."
+    "section": "How has Taylor Swift’s music genres evolved over time?",
+    "text": "How has Taylor Swift’s music genres evolved over time?\nLet’s take a look at how Taylor Swift’s music has changed over time, by looking at the genres of music she’s produced.\n \nFrom the data above, we can see that Taylor Swift moved away from Folk and Country genres to fully embrace Pop as her main genre of music over the years. For instance, in her album “Reputation”, Pop was the overwhelming primary genre. However, in recent albums such as “folklore”, “evermore” and “Midnights”, there is a resurgence of songs in the American Folk, Country and Ballad genres."
   },
   {
     "objectID": "index.html#heatmap-of-genres-against-song-page-views",
