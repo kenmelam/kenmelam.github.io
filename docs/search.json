@@ -11,6 +11,48 @@
     "href": "index.html",
     "title": "An Analysis of Taylor Swift’s Discography",
     "section": "",
-    "text": "Let’s take a look at how Taylor Swift’s music has evolved over time!\n \nFrom the data above, we can see that Taylor Swift moved away from folk and country genres to fully embrace pop as her main genre of music over the years. For instance, in her album Reputation, pop was the overwhelming primary genre. However, in recent albums such as folklore, evermore and Midnights, there is a resurgence of songs in the american folk, country and ballad genres.\nHowever, which albums did the best in terms of average page views per song?\n \nFrom this analysis, it seems like folklore, a primarily folk-pop album was most popular. Since users mainly use the Genius website to search for lyrics, it can be inferred that the highest number of users wanted to know more about the lyrics of the songs on the album. Let’s look even further into this – what keywords in Taylor’s folklore album came up the most?"
+    "text": "Let’s take a look at how Taylor Swift’s music has changed over time, by looking at the genres of music she’s produced.\n \nFrom the data above, we can see that Taylor Swift moved away from folk and country genres to fully embrace pop as her main genre of music over the years. For instance, in her album Reputation, pop was the overwhelming primary genre. However, in recent albums such as folklore, evermore and Midnights, there is a resurgence of songs in the american folk, country and ballad genres."
+  },
+  {
+    "objectID": "index.html#how-has-taylor-swifts-music-evolved-over-time",
+    "href": "index.html#how-has-taylor-swifts-music-evolved-over-time",
+    "title": "An Analysis of Taylor Swift’s Discography",
+    "section": "",
+    "text": "Let’s take a look at how Taylor Swift’s music has changed over time, by looking at the genres of music she’s produced.\n \nFrom the data above, we can see that Taylor Swift moved away from folk and country genres to fully embrace pop as her main genre of music over the years. For instance, in her album Reputation, pop was the overwhelming primary genre. However, in recent albums such as folklore, evermore and Midnights, there is a resurgence of songs in the american folk, country and ballad genres.\nHowever, which albums did the best in terms of average page views per song?\n\n\n\n\n\nFrom this analysis, it seems like folklore, a primarily folk-pop album was most popular. Since users mainly use the Genius website to search for lyrics, it can be inferred that the highest number of users wanted to know more about the lyrics of the songs on the album. Let’s look even further into this – what keywords in Taylor’s folklore album came up the most?"
+  },
+  {
+    "objectID": "index.html#how-has-taylor-swifts-music-genres-evolved-over-time",
+    "href": "index.html#how-has-taylor-swifts-music-genres-evolved-over-time",
+    "title": "An Analysis of Taylor Swift’s Discography",
+    "section": "",
+    "text": "Let’s take a look at how Taylor Swift’s music has changed over time, by looking at the genres of music she’s produced.\n \nFrom the data above, we can see that Taylor Swift moved away from folk and country genres to fully embrace pop as her main genre of music over the years. For instance, in her album Reputation, pop was the overwhelming primary genre. However, in recent albums such as folklore, evermore and Midnights, there is a resurgence of songs in the american folk, country and ballad genres."
+  },
+  {
+    "objectID": "index.html#heatmap-of-genres-against-song-page-views",
+    "href": "index.html#heatmap-of-genres-against-song-page-views",
+    "title": "An Analysis of Taylor Swift’s Discography",
+    "section": "Heatmap of genres against song page views",
+    "text": "Heatmap of genres against song page views\nHowever, how does this relate to the average song page views she received?\n\n\n\n\n\nFrom this analysis, it seems that that recent albums which showcase American Folk and Folk are most popular, which are genres not explored by Swift since her debut self-titled album, “Taylor Swift” in 2006."
+  },
+  {
+    "objectID": "index.html#which-producers-made-the-best-music",
+    "href": "index.html#which-producers-made-the-best-music",
+    "title": "An Analysis of Taylor Swift’s Discography",
+    "section": "Which producers made the best music?",
+    "text": "Which producers made the best music?\nSo, who is behind this move to produce more songs in these genres? Who on her team knew which direction to go in? Analysing this will allow Swift to choose the right producers to make music with her in the future.\n\n\n\n\n\nSince the album “folklore” was released in 2020, we can look at the producers who worked on bringing this new sound to life. Aside from Swift herself, this would most prominently be Christopher Rowe, Jack Antonoff, Aaron Dessner and William Bowery."
+  },
+  {
+    "objectID": "index.html#which-producers-made-music-that-listeners-cared-most-about",
+    "href": "index.html#which-producers-made-music-that-listeners-cared-most-about",
+    "title": "An Analysis of Taylor Swift’s Discography",
+    "section": "Which producers made music that listeners cared most about?",
+    "text": "Which producers made music that listeners cared most about?\nOut of the top producers, which ones made tracks that people were most interested in? From this boxplot, we can see that the median song page views were highest for those written by William Bowery.\n \nSo, who is William Bowery?\n\n\n\n\n\nSurprise! William Bowery is actually Taylor Swift’s ex, Joe Alwyn. He produced many of the tracks on “folklore” with her, under this pseudonym. To read more about William and his contributions to Swift’s songs, click here."
+  },
+  {
+    "objectID": "index.html#additional-analysis-colours-of-the-albums",
+    "href": "index.html#additional-analysis-colours-of-the-albums",
+    "title": "An Analysis of Taylor Swift’s Discography",
+    "section": "Additional Analysis: Colours of the albums",
+    "text": "Additional Analysis: Colours of the albums\nSince users mainly use the Genius website to search for lyrics, it can be inferred that the highest number of users wanted to know more about the lyrics of the songs on the album. For Taylor Swift’s Eras Tour, many fans want to dress up according to the colour scheme of each album. This chart can help fans figure out what colours appeared the most, and plan their outfits accordingly!"
   }
 ]

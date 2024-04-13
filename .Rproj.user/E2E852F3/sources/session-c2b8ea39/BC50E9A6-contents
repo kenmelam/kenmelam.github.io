@@ -2,7 +2,7 @@
 title: "An Analysis of Taylor Swift's Discography"
 ---
 
-## How has Taylor Swift's music evolved over time?
+## How has Taylor Swift's music genres evolved over time?
 Let's take a look at how Taylor Swift's music has changed over time, by looking at the genres of music she's produced. 
 
 ```{=html}
@@ -11,14 +11,114 @@ Let's take a look at how Taylor Swift's music has changed over time, by looking 
 
 From the data above, we can see that Taylor Swift moved away from folk and country genres to fully embrace pop as her main genre of music over the years. For instance, in her album Reputation, pop was the overwhelming primary genre. However, in recent albums such as folklore, evermore and Midnights, there is a resurgence of songs in the american folk, country and ballad genres. 
 
-However, which albums did the best in terms of average page views per song?
+## Heatmap of genres against song page views
+
+However, how does this relate to the average song page views she received?
+
+```{r, echo = F, warning=F, message=F}
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(stringr)  # for str_detect
+
+taylorswift <- read.csv("taylorswift.csv")  # Adjust path as needed
+
+selected_albums <- c("Taylor Swift", "Fearless (Platinum Edition)", "Fearless (Taylor's Version)", 
+                     "Speak Now (Deluxe)", "Speak Now (Taylor's Version)",
+                     "Red (Deluxe Version)", "Red (Taylor's Version)",
+                     "1989 (Deluxe)", "1989 (Taylor's Version) [Tangerine Edition]",
+                     "reputation", "Lover", "folklore (deluxe version)",
+                     "evermore (deluxe version)", "Midnights (3am Edition)")
+
+taylorswift <- taylorswift %>%
+  filter(album_title %in% selected_albums)
+
+genres <- c('Country', 'Country Rock', 'American Folk', 'Folk', 'Ballad', 'Pop')
+cur_col <- taylorswift$song_tags
+taylorswift$Country = as.numeric(str_detect(cur_col, pattern = genres[[1]]))
+taylorswift$Country_Rock = as.numeric(str_detect(cur_col, pattern = genres[[2]]))
+taylorswift$American_Folk = as.numeric(str_detect(cur_col, pattern = genres[[3]]))
+taylorswift$Folk = as.numeric(str_detect(cur_col, pattern = genres[[4]]))
+taylorswift$Ballad = as.numeric(str_detect(cur_col, pattern = genres[[5]]))
+taylorswift$Pop = as.numeric(str_detect(cur_col, pattern = genres[[6]]))
+
+genre_columns <- c("Country", "Country_Rock", "American_Folk", "Folk", "Ballad", "Pop")
+genre_data <- taylorswift %>%
+  select(album_title, song_page_views, all_of(genre_columns)) %>%
+  pivot_longer(cols = genre_columns, names_to = "Genre", values_to = "Present") %>%
+  filter(Present == 1) %>%
+  group_by(album_title, Genre) %>%
+  summarize(Average_Views = mean(song_page_views, na.rm = TRUE), .groups = 'drop')
+
+# Heatmap plot
+ggplot(genre_data, aes(x = album_title, y = Genre, fill = Average_Views)) + 
+  geom_tile() +
+  scale_fill_gradient(low = "blue", high = "red") +
+  labs(title = "Genre Popularity by Selected Albums", x = "Album", y = "Genre") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))  
+```
+From this analysis, it seems that that recent albums which showcase American Folk and Folk are most popular, which are genres not explored by Swift since her debut self-titled album, "Taylor Swift" in 2006. 
+
+## Which producers made the best music?
+So, who is behind this move to produce more songs in these genres? Who on her team knew which direction to go in? Analysing this will allow Swift to choose the right producers to make music with her in the future.
+
+```{r, echo = F, warning=F, message=F}
+library(ggplot2)
+library(dplyr)
+library(lubridate)  # Saw online that this can help to handle dates so I don't have to do it manually
+
+taylorswift <- read.csv("taylorswift.csv")  # Adjust path as needed
+
+taylorswift <- taylorswift %>%
+  mutate(song_producers = strsplit(as.character(song_producers), ",")) %>%
+  unnest(song_producers) %>%
+  mutate(song_producers = gsub("[[:punct:]]", "", song_producers),  
+         song_producers = trimws(song_producers),  
+         year = year(ymd(song_release_date)))  # Extract year from the release date using lubridate
+
+top_producers <- taylorswift %>%
+  group_by(song_producers) %>%
+  summarize(total_songs = n(), .groups = 'drop') %>%
+  top_n(10, total_songs) %>%
+  pull(song_producers)
+
+filtered_data <- taylorswift %>%
+  filter(song_producers %in% top_producers) %>%
+  group_by(year, song_producers) %>%
+  summarize(songs_per_year = n(), .groups = 'drop')
+
+lineplot <- ggplot(filtered_data, aes(x = year, y = songs_per_year, color = song_producers, group = song_producers)) +
+  geom_line() +  
+  geom_point() +  
+  labs(title = "Appearance of Song Producers Over Time",
+       x = "Year", y = "Number of Songs Produced", colour="Producer") +
+  theme_minimal() +
+  scale_x_continuous(breaks = scales::pretty_breaks(n = 10))
+
+# Display the plot
+print(lineplot)
+
+```
+Since the album "folklore" was released in 2020, we can look at the producers who worked on bringing this new sound to life. Aside from Swift herself, this would most prominently be Christopher Rowe, Jack Antonoff, Aaron Dessner and William Bowery. 
+
+## Which producers made music that listeners cared most about?
+Out of the top producers, which ones made tracks that people were most interested in? From this boxplot, we can see that the median song page views were highest for those written by William Bowery. 
 
 ```{=html}
-<iframe height="700" width="100%" frameborder="no" src="https://kenme.shinyapps.io/myshinyapp3/"> </iframe>
+<iframe height="700" width="100%" frameborder="no" src="https://kenme.shinyapps.io/shinyapp5/"> </iframe>
 ```
 
-From this analysis, it seems like folklore, a primarily folk-pop album was most popular. Since users mainly use the Genius website to search for lyrics, it can be inferred that the highest number of users wanted to know more about the lyrics of the songs on the album. Let's look even further into this -- what keywords in Taylor's folklore album came up the most?
+So, who is William Bowery?
+```{r, echo=FALSE}
+library(shiny)
+img(src="william.png", height="100%", width="100%", align = "center")
+```
+Surprise! William Bowery is actually Taylor Swift's ex, Joe Alwyn. He produced many of the tracks on "folklore" with her, under this pseudonym. To read more about William and his contributions to Swift's songs, [click here](https://taylorswift.fandom.com/wiki/William_Bowery).
+
+## Additional Analysis: Colours of the albums
+Since users mainly use the Genius website to search for lyrics, it can be inferred that the highest number of users wanted to know more about the lyrics of the songs on the album. For Taylor Swift's Eras Tour, many fans want to dress up according to the colour scheme of each album. This chart can help fans figure out what colours appeared the most, and plan their outfits accordingly! 
 
 ```{=html}
-<iframe height="700" width="100%" frameborder="no" src="https://kenme.shinyapps.io/myshinyapp4/"> </iframe>
+<iframe height="700" width="100%" frameborder="no" src="https://kenme.shinyapps.io/shinyapp4/"> </iframe>
 ```
+

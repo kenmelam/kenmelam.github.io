@@ -1,0 +1,12 @@
+name: shinyapp5
+title: shinyapp5
+username: kenme
+account: kenme
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 11748278
+bundleId: 8489326
+url: https://kenme.shinyapps.io/shinyapp5/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
