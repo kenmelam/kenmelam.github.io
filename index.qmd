@@ -129,7 +129,6 @@ Since users mainly use the Genius website to search for lyrics, it can be inferr
 
 Take a look at some of the Singapore Eras Tour outfits here!
 ```{=html}
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=rdY3X2PI8fM
-" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/watch?v=rdY3X2PI8fM" data-external= "1" > </iframe>
 ```
 
