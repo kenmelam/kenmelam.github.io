@@ -1,5 +1,6 @@
 ---
 title: "An Analysis of Taylor Swift's Discography"
+runtime: shiny
 ---
 Taylor Swift is undoubtedly a titan of the music industry. Question is, does she know how to retain that title in the long run? To answer this question, this report provides an analysis of Taylor Swift's song popularity over the years, utilizing various data visualization techniques to highlight trends and unique insights. 
 
@@ -112,8 +113,22 @@ Out of the top producers, which ones made tracks that people were most intereste
 So, who is William Bowery?
 ```{r, echo=FALSE}
 library(shiny)
-img(src="william.png", height="100%", width="100%", align = "center")
+actionButton("showBtn", "Reveal Who He Is!", class = "btn-primary")
+
+# Placeholder for the image
+uiOutput("imageDisplay")
+
+shinyServer(function(input, output, session) {
+  # Render the image when the button is clicked
+  output$imageDisplay <- renderUI({
+    if (input$showBtn > 0) {
+      tags$img(src = "william.png", height = "300px")
+    }
+  })
+})
+
 ```
+
 Surprise! William Bowery is actually Taylor Swift's ex, Joe Alwyn. He produced many of the tracks on "folklore" with her, under this pseudonym. Perhaps fans are most interested in songs written on "folklore" as they could get a glimpse into Alwyn and Swift's relationship. To read more about William Bowery and his contributions to Taylor Swift's songs, [click here](https://taylorswift.fandom.com/wiki/William_Bowery).
 
 Since they're now broken up, Taylor Swift can consider continuing collaborations with Jack Antonoff, who has been working on her recent albums with her. Besides Antonoff, she should also look into collaborating with Joel Little, Ali Payami, Max Martin and Jahaan Sweet again, who have written fewer songs with her but have garnered more interest in the songs that they have contributed to.
@@ -125,6 +140,7 @@ Since users mainly use the Genius website to search for lyrics, it can be inferr
 <iframe height="700" width="100%" frameborder="no" src="https://kenme.shinyapps.io/shinyapp4/"> </iframe>
 ```
 
+Take a look at some of the Singapore Eras Tour outfits here!
 ```{=html}
 <iframe width="560" height="315" src="https://vt.tiktok.com/ZSFGG3HLG" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ```
