@@ -54,7 +54,7 @@ genre_data <- taylorswift %>%
 # Heatmap plot
 ggplot(genre_data, aes(x = album_title, y = Genre, fill = Average_Views)) + 
   geom_tile() +
-  scale_fill_gradient(low = "blue", high = "red") +
+  scale_fill_gradient(low = "blue", high = "red", name = "Average Views") +
   labs(title = "Genre Popularity by Selected Albums", x = "Album", y = "Genre") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))  
 ```
