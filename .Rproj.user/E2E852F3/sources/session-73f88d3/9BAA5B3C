@@ -3,7 +3,7 @@
     "path": "~/Documents/GitHub/kenmelam.github.io/about.qmd",
     "project_path": "about.qmd",
     "type": "quarto_markdown",
-    "hash": "682735686",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1710484791170.0,
@@ -17,8 +17,8 @@
         "docOutlineVisible": "0",
         "rmdVisualCollapsedChunks": "",
         "rmdVisualModeLocation": "439:94",
-        "cursorPosition": "19,17",
-        "scrollLine": "19"
+        "cursorPosition": "11,0",
+        "scrollLine": "1"
     },
     "folds": "",
     "lastKnownWriteTime": 1713164515,
