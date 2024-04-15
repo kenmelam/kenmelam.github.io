@@ -15,12 +15,18 @@ taylorswift$Folk = as.numeric(str_detect(cur_col, pattern = genres[[4]]))
 taylorswift$Ballad = as.numeric(str_detect(cur_col, pattern = genres[[5]]))
 taylorswift$Pop = as.numeric(str_detect(cur_col, pattern = genres[[6]]))
 
+included_albums <- c("Taylor Swift", "Fearless (Platinum Edition)", "Fearless (Taylor's Version)", 
+                     "Speak Now (Deluxe)", "Speak Now (Taylor's Version)",
+                     "Red (Deluxe Version)", "Red (Taylor's Version)",
+                     "1989 (Deluxe)", "1989 (Taylor's Version) [Tangerine Edition]",
+                     "reputation", "Lover", "folklore (deluxe version)",
+                     "evermore (deluxe version)", "Midnights (3am Edition)")
 
 # 1: plot bar chart for different genres present in her albums  
 # Define UI for application
 ui <- fluidPage(  titlePanel("Genres Covered Per Album"),
                   sidebarLayout(    sidebarPanel(
-                    selectInput("album_title", "Select an Album", choices = unique(taylorswift$album_title)), actionButton("Start","Generate Analysis")),
+                    selectInput("album_title", "Select an Album", choices = included_albums), actionButton("Start","Generate Analysis")),
                     mainPanel( tabsetPanel(tabPanel("Genres Covered", plotOutput("genreplot")) )
                     )  )
 )
