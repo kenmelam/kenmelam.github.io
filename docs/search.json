@@ -25,7 +25,7 @@
     "href": "index.html#how-has-taylor-swifts-music-genres-evolved-over-time",
     "title": "An Analysis of Taylor Swift’s Discography",
     "section": "How has Taylor Swift’s music genres evolved over time?",
-    "text": "How has Taylor Swift’s music genres evolved over time?\nLet’s take a look at how Taylor Swift’s music has changed over time, by looking at the genres of music she’s produced.\n \nFrom the data above, we can see that Taylor Swift moved away from Folk and Country genres to fully embrace Pop as her main genre of music over the years. For instance, in her album “Reputation”, Pop was the overwhelming primary genre. However, in recent albums such as “folklore”, “evermore” and “Midnights”, there is a resurgence of songs in the American Folk, Country and Ballad genres."
+    "text": "How has Taylor Swift’s music genres evolved over time?\nLet’s take a look at how Taylor Swift’s music has changed over time, by first looking at the genres of music she’s produced.\n \nFrom the data above, we can see that Taylor Swift moved away from Folk and Country genres to fully embrace Pop as her main genre of music over the years. For instance, in her album “Reputation”, Pop was the overwhelming primary genre. However, in recent albums such as “folklore”, “evermore” and “Midnights”, there is a resurgence of songs in the American Folk, Country and Ballad genres."
   },
   {
     "objectID": "index.html#heatmap-of-genres-against-song-page-views",
@@ -46,14 +46,14 @@
     "href": "index.html#which-producers-made-music-that-listeners-cared-most-about",
     "title": "An Analysis of Taylor Swift’s Discography",
     "section": "Which producers made music that listeners cared most about?",
-    "text": "Which producers made music that listeners cared most about?\nOut of the top producers, which ones made tracks that people were most interested in? From this boxplot, we can see that the median song page views were highest for those written by William Bowery.\n \nSo, who is William Bowery?\n\n\n\n\n\nSurprise! William Bowery is actually Taylor Swift’s ex, Joe Alwyn. He produced many of the tracks on “folklore” with her, under this pseudonym. Perhaps fans are most interested in songs written on “folklore” as they could get a glimpse into Alwyn and Swift’s relationship. To read more about William Bowery and his contributions to Taylor Swift’s songs, click here.\nSince they’re now broken up, Taylor Swift can consider continuing collaborations with Jack Antonoff, who has been working on her recent albums with her. Besides Antonoff, she should also look into collaborating with Joel Little, Ali Payami, Max Martin and Jahaan Sweet again, who have written fewer songs with her but have garnered more interest in the songs that they have contributed to."
+    "text": "Which producers made music that listeners cared most about?\nOut of the top producers, which ones made tracks that people were most interested in? From this boxplot, we can see that the median song page views were highest for those written by William Bowery.\n \nSo, who is William Bowery?\n\n\n\n\n\nSurprise! William Bowery is actually Taylor Swift’s ex-boyfriend, Joe Alwyn. He produced many of the tracks on “folklore” with her, under this pseudonym. Perhaps fans are most interested in songs written on “folklore” as they could get a glimpse into Alwyn and Swift’s relationship.\nTo read more about William Bowery and his contributions to Taylor Swift’s songs, click here.\nSince they’re now broken up, Taylor Swift can consider continuing collaborations with Jack Antonoff, who has been working on albums with her since 2012. Besides Antonoff, she should also look into collaborating with Joel Little, Ali Payami, Max Martin and Jahaan Sweet again, who have written fewer songs with her but have garnered more interest in the songs that they have contributed to."
   },
   {
     "objectID": "index.html#additional-analysis-colours-of-the-albums",
     "href": "index.html#additional-analysis-colours-of-the-albums",
     "title": "An Analysis of Taylor Swift’s Discography",
     "section": "Additional Analysis: Colours of the albums",
-    "text": "Additional Analysis: Colours of the albums\nSince users mainly use the Genius website to search for lyrics, it can be inferred that the highest number of users wanted to know more about the lyrics of the songs on the album. For Taylor Swift’s Eras Tour, many fans want to dress up according to the colour scheme of each album. This chart can help fans figure out what colours appeared the most, and plan their outfits accordingly!\n \nTake a look at some of the Singapore Eras Tour outfits here!"
+    "text": "Additional Analysis: Colours of the albums\nSince users mainly use the Genius website to search for lyrics, it can be inferred that the highest number of users wanted to know more about the lyrics of the songs on the album. For Taylor Swift’s Eras Tour, many fans want to dress up according to the colour scheme of each album. This chart can help fans figure out what colours appeared the most, and plan their outfits accordingly!"
   },
   {
     "objectID": "about.html#about-me",
