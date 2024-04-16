@@ -3,7 +3,7 @@
     "path": "~/Documents/GitHub/kenmelam.github.io/shinyapp4/app.R",
     "project_path": "shinyapp4/app.R",
     "type": "r_source",
-    "hash": "0",
+    "hash": "2031774576",
     "contents": "",
     "dirty": false,
     "created": 1712672828757.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "15,76",
-        "scrollLine": "0"
+        "cursorPosition": "66,0",
+        "scrollLine": "58"
     },
     "folds": "",
-    "lastKnownWriteTime": 1712832821,
+    "lastKnownWriteTime": 1713235581,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1712832821478,
+    "last_content_update": 1713235581295,
     "read_only": false,
     "read_only_alternatives": []
 }

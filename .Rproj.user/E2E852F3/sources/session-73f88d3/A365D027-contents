@@ -72,12 +72,7 @@ ui <- fluidPage(
     sidebarPanel(
       selectInput("selectedAlbum",
                   "Choose an Album:",
-                  choices = c("Taylor Swift", "Fearless (Platinum Edition)", "Fearless (Taylor's Version)", 
-                              "Speak Now (Deluxe)", "Speak Now (Taylor's Version)",
-                              "Red (Deluxe Version)", "Red (Taylor's Version)",
-                              "1989 (Deluxe)", "1989 (Taylor's Version) [Tangerine Edition]",
-                              "reputation", "Lover", "folklore (deluxe version)",
-                              "evermore (deluxe version)", "Midnights (3am Edition)"),
+                  choices = included_albums,
                   selected = "Taylor Swift")
     ),
     mainPanel(
